@@ -39,14 +39,14 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
-class DemoNavbar extends React.Component {
+class MainNavbar extends React.Component {
   componentDidMount() {
     let headroom = new Headroom(document.getElementById("navbar-main"));
     // initialise
     headroom.init();
   }
   state = {
-    collapseClasses: "",
+    collapseClasses: "",                
     collapseOpen: false,
   };
 
@@ -72,7 +72,7 @@ class DemoNavbar extends React.Component {
             id="navbar-main"
           >
             <Container>
-              <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
+              <NavbarBrand className="mr-lg-5" to="/main-dashboard" tag={Link}>
                 <img
                   alt="..."
                   src={require("assets/img/brand/argon-react-white.png")}
@@ -110,7 +110,7 @@ class DemoNavbar extends React.Component {
                   <UncontrolledDropdown nav>
                     <DropdownToggle nav>
                       <i className="ni ni-ui-04 d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">Components</span>
+                      <span className="nav-link-inner--text">My Dashboard</span>
                     </DropdownToggle>
                     <DropdownMenu className="dropdown-menu-xl">
                       <div className="dropdown-menu-inner">
@@ -124,12 +124,9 @@ class DemoNavbar extends React.Component {
                           </div>
                           <Media body className="ml-3">
                             <h6 className="heading text-primary mb-md-1">
-                              Getting started
+                              My Stories
                             </h6>
-                            <p className="description d-none d-md-inline-block mb-0">
-                              Learn how to use Argon compiling Scss, change
-                              brand colors and more.
-                            </p>
+                            <p>Here Are Your all posted stories</p>
                           </Media>
                         </Media>
                         <Media
@@ -142,13 +139,14 @@ class DemoNavbar extends React.Component {
                           </div>
                           <Media body className="ml-3">
                             <h6 className="heading text-primary mb-md-1">
-                              Foundation
+                            Here is Something for You
                             </h6>
                             <p className="description d-none d-md-inline-block mb-0">
-                              Learn more about colors, typography, icons and the
-                              grid system we used for Argon.
+                              Learn how to use Argon compiling Scss, change
+                              brand colors and more.
                             </p>
                           </Media>
+                     
                         </Media>
                         <Media
                           className="d-flex align-items-center"
@@ -160,7 +158,7 @@ class DemoNavbar extends React.Component {
                           </div>
                           <Media body className="ml-3">
                             <h5 className="heading text-warning mb-md-1">
-                              Components
+                             Guidlines
                             </h5>
                             <p className="description d-none d-md-inline-block mb-0">
                               Browse our 50 beautiful handcrafted components
@@ -174,7 +172,7 @@ class DemoNavbar extends React.Component {
                   <UncontrolledDropdown nav>
                     <DropdownToggle nav>
                       <i className="ni ni-collection d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">Examples</span>
+                      <span className="nav-link-inner--text">Actions</span>
                     </DropdownToggle>
                     <DropdownMenu>
                       <DropdownItem to="/landing-page" tag={Link}>
@@ -261,14 +259,14 @@ class DemoNavbar extends React.Component {
                     <Button
                       className="btn-neutral btn-icon"
                       color="default"
-                      to="/register-page"
+                      to="/write-story"
                       tag={Link}
                     >
                       <span className="btn-inner--icon">
                         <i class="fa-thin fa-registered"></i>{" "}
                       </span>
                       <span className="nav-link-inner--text ml-1">
-                        Register
+                        Write Your Story
                       </span>
                     </Button>
                   </NavItem>
@@ -282,4 +280,4 @@ class DemoNavbar extends React.Component {
   }
 }
 
-export default DemoNavbar;
+export default MainNavbar;

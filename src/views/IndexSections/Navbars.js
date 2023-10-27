@@ -206,7 +206,7 @@ class Navbars extends React.Component {
             </Container>
           </Navbar>
           {/* Navbar success */}
-          <Navbar className="navbar-dark bg-success mt-4" expand="lg">
+          {/* <Navbar className="navbar-dark bg-success mt-4" expand="lg">
             <Container>
               <NavbarBrand href="#pablo" onClick={(e) => e.preventDefault()}>
                 Success Color
@@ -506,7 +506,7 @@ class Navbars extends React.Component {
                 </Nav>
               </UncontrolledCollapse>
             </Container>
-          </Navbar>
+          </Navbar> */}
         </section>
       </>
     );

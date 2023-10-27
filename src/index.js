@@ -28,6 +28,8 @@ import Landing from "views/examples/Landing.js";
 import Login from "views/examples/Login.js";
 import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
+import ViewFullStory from "views/IndexSections/ViewFullStory";
+import WriteStory from "views/IndexSections/WriteStory";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -39,6 +41,9 @@ root.render(
       <Route path="/login-page" exact element={<Login />} />
       <Route path="/profile-page" exact element={<Profile />} />
       <Route path="/register-page" exact element={<Register />} />
+      <Route path="/view-full-story/:id" exact element={<ViewFullStory />} />
+      <Route path="/main-dashboard" exact element={<Profile />} />
+      <Route path="/write-story" exact element={<WriteStory />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   </BrowserRouter>
